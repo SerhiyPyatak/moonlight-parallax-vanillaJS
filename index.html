@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon Light Parallax Effects | Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <img src="assets/bg.jpg" id="bg" />
+      <img src="assets/moon.png" id="moon" />
+      <img src="assets/mountain.png" id="mountain" />
+      <img src="assets/road.png" id="road" />
+      <h2 id="text">Moon Light</h2>
+    </section>
+
+    <section class="content">
+      <h2 class="article-header">Parallax Background scrolling</h2>
+      <p class="article-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta
+        facilis quibusdam sapiente voluptatem quidem, ratione ipsa eum ut
+        assumenda! Sapiente, perspiciatis quia. Nostrum nemo corrupti velit
+        possimus impedit sint suscipit debitis aspernatur rerum iste natus quam
+        incidunt voluptas, veniam eum officiis porro excepturi reprehenderit!
+        Minus ut vero cum ipsa mollitia sint omnis voluptates nihil suscipit
+        porro! Sapiente, architecto dolore harum praesentium, corrupti fugit
+        nisi iure mollitia, minima quisquam assumenda quae! Tempora et, ea dicta
+        minima consectetur vitae sunt laudantium. Asperiores, eaque? Dolorem,
+        quibusdam numquam reiciendis obcaecati voluptates vel modi quam, fugiat
+        aliquid quisquam minus recusandae. Ex, maiores quaerat! Perspiciatis
+        corporis architecto maiores tempora? Dolore aut, praesentium libero
+        nesciunt dolor quas ex, odio obcaecati ipsam fugiat, unde a
+        reprehenderit nisi excepturi placeat quia quo debitis reiciendis fuga.
+        Odit praesentium eum maiores tenetur non libero dolore deserunt sed id!
+        Enim ex voluptate incidunt unde voluptatum deserunt deleniti velit
+        corporis numquam ducimus! Et natus dolor cumque amet minus consequatur
+        id consectetur. Reprehenderit exercitationem non, sit eius unde
+        voluptates? Quis eligendi molestias voluptate sit nemo, nam enim
+        necessitatibus mollitia eveniet quaerat error tempora numquam accusamus
+        sequi! Dignissimos eum quisquam fugit iusto non repellendus temporibus
+        veniam laborum cupiditate ad optio quia reprehenderit, minus sapiente
+        sed, repudiandae veritatis quis adipisci dicta nisi magni? Temporibus
+        voluptas, adipisci molestiae rem veniam quos ipsam reiciendis quae
+        minima tenetur magnam, fugiat recusandae nam amet error et facilis
+        doloribus est. Provident perferendis repellendus esse temporibus
+        exercitationem ex recusandae laudantium ab, a cum illo vel corrupti ea
+        voluptatem? Aliquam, ullam sit.
+      </p>
+    </section>
+
+    <script>
+      let bg = document.getElementById("bg");
+      let moon = document.getElementById("moon");
+      let mountain = document.getElementById("mountain");
+      let road = document.getElementById("road");
+      let text = document.getElementById("text");
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+
+        bg.style.top = value * 0.25 + "px";
+        moon.style.left = -value * 0.5 + "px";
+        mountain.style.top = -value * 0.15 + "px";
+        road.style.top = value * 0.15 + "px";
+        text.style.top = value * 1 + "px";
+      });
+    </script>
+  </body>
+</html>
